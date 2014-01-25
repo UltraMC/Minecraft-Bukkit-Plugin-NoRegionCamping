@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -166,6 +167,21 @@ public class EventsListener implements Listener {
 			this.locationTimers.get(playerName).cancel();
 			this.locationTimers.remove(playerName);
 			this.playerLocationRecords.remove(playerName);
+		}
+	}
+
+	@EventHandler
+	public void onPlayerDeath(PlayerDeathEvent event) {
+		Player player = (Player) event.getEntity();
+		String playerName = player.getName();
+
+		if (this.fightingTimers.containsKey(playerName)) {
+			this.fightingTimers.remove(playerName);
+			this.playerRecords.remove(playerName);
+
+			if (plugin.getConfig().getBoolean("PluginNoRegionCamping.messages.endOfFight")) {
+				player.sendMessage(ChatColor.getByChar(plugin.getConfig().getString("PluginNoRegionCamping.messages.color")) + plugin.getConfig().getString("PluginNoRegionCamping.language.endOfFight"));
+			}
 		}
 	}
 

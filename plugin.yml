@@ -1,6 +1,6 @@
 name: NoRegionCamping
 description: Cancel WorldGuard region entry and selected commands while player is in PvP fight. Lets choose if to kill PvP loggers.
-version: 0.1.1.0
+version: 0.1.1.1
 author: UltraMC
 website: http://serweryminecraft24.pl
 
