@@ -127,7 +127,7 @@ public class PluginNoRegionCamping extends JavaPlugin {
 		config.addDefault("PluginNoRegionCamping.language.commandCanceled", String.valueOf("You're fighting, can't let you use that command!"));
 		config.addDefault("PluginNoRegionCamping.language.amIFightingTrueKillLoggersOff", String.valueOf("You're fighting right now!"));
 		config.addDefault("PluginNoRegionCamping.language.amIFightingTrueKillLoggersOn", String.valueOf("You're fighting right now! Don't log off or you'll die!"));
-		config.addDefault("PluginNoRegionCamping.language.amIFightingFalse", String.valueOf("You're not fighting and can log off safetly."));
+		config.addDefault("PluginNoRegionCamping.language.amIFightingFalse", String.valueOf("You're not fighting and can log off safely."));
 		config.addDefault("PluginNoRegionCamping.language.broadcastPvPLogger", String.valueOf("%s logged out while PvP fighting and he will wake up dead."));
 
 		config.options().copyDefaults(true);
