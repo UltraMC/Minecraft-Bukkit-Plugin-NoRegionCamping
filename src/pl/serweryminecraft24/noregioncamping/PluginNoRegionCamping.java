@@ -135,7 +135,7 @@ public class PluginNoRegionCamping extends JavaPlugin {
 		saveConfig();
 
 		if (config.getInt("PluginNoRegionCamping.fightTime") < 1) {
-			this.logger.info("Plugin is disabled doe the fightTime < 1 in config. Turning it off.");
+			this.logger.info("Plugin is disabled due the fightTime < 1 in config. Turning it off.");
 
 			getServer().getPluginManager().disablePlugin(this);
 

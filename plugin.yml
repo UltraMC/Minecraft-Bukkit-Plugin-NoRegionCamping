@@ -9,7 +9,7 @@ depend: [WorldGuard]
 
 commands:
    amifighting:
-      description: Tells are you at PvP fihgt and is it safe to log off
+      description: Tells are you at PvP fight and is it safe to log off
       usage: /<command>
    af:
       description: Shorthand for command /amifighting
